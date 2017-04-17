@@ -32,7 +32,9 @@ BoldItalicFont=texgyreheros-bolditalic.otf
 \usepackage{ wasysym }
 \usepackage{fontawesome}
 \usepackage{tgadventor}
+\usepackage{titlesec}
 
+% colours that I used in this CV
 \definecolor{maincolor}{RGB}{0,128,128}
 \definecolor{workplace}{HTML}{0395DE}
 \definecolor{sidesections}{HTML}{0395DE}
@@ -43,7 +45,8 @@ BoldItalicFont=texgyreheros-bolditalic.otf
                                % small capitals (\scshape) and left aligned (\raggedright)
   {}{0em}                      % Can be used to give a prefix to all sections, like 'Section ...'
   {}                           % Can be used to insert code before the heading
-
+% \titlespacing*{<command>}{<left>}{<before-sep>}{<after-sep>}
+\titlespacing*{\section}{0pt}{2pt}{3pt}
   \titleformat{\subsection}
   {\large\scshape\raggedright}
   {}{0em}
@@ -55,15 +58,19 @@ BoldItalicFont=texgyreheros-bolditalic.otf
 \newcommand{\datedsubsection}[2]{ %
   \subsection[#1]{#1 \hfill #2}%
 }
+
+% custom header
 \newcommand{\pageheader}[8]{\fontfamily{cmss}\selectfont %
+	% the rectangle on the top of the page   
    \begin{tikzpicture}[remember picture,overlay]
 		\node (header) [shape=rectangle, fill=maincolor, minimum height=5cm, minimum width=\paperwidth, anchor=north west] at (current page.north west) {};
 	
-	%\node [below left,align=center, anchor=south](name) at (header){#1 #2};
+	% the full name
 	\node(text) [anchor=south, xshift=1.5cm] (name) at (header) {%
       \fontsize{40pt}{62pt}\color{white}\selectfont%
       {\bodyfont #1}{\headingfont #2}
     };
+    % the rest of the information
     \node(text) [anchor=north] (contact) at (name.south) {%
       \fontsize{10pt}{16pt}\color{white}\selectfont%
       {\headingfont \faEnvelope~ #4 |~ \headingfont \phone~ #3 |~\headingfont \faGithub ~ #5 ~|~\headingfont \faLinkedinSquare ~ #6}
@@ -73,13 +80,14 @@ BoldItalicFont=texgyreheros-bolditalic.otf
       {\faHome \headingfont #7 |~ \faBirthdayCake ~\headingfont #8}
     };
     
+    % the picture
 	\node[xshift=2.5cm, yshift=-2.2cm] (mypic) at (header.west)
     {\includegraphics[width=.33\textwidth]{nikola_cv_photo.png}};    
 	\end{tikzpicture}
 }
 
 
-
+% for the side bar
 \RequirePackage[absolute,overlay]{textpos}
 \setlength{\TPHorizModule}{1cm}
 \setlength{\TPVertModule}{1cm}
@@ -99,7 +107,7 @@ BoldItalicFont=texgyreheros-bolditalic.otf
 
 }
 % Command for printing skill progress bars; max level is 3; non-integers allowed
-\newcommand{\grade}[1]{%
+\newcommand{\skills}[1]{%
 \tikzset{node distance = 0.2cm and 0.2cm}
 \begin{tikzpicture}[remember picture]
 \foreach [count=\i] \x/\y in {#1}{
@@ -110,6 +118,7 @@ BoldItalicFont=texgyreheros-bolditalic.otf
 \end{tikzpicture}%
 }
 
+% the entries for education/work
 \setlength{\tabcolsep}{0pt}
 \newenvironment{entrylist}{%
   \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}ll}
@@ -118,10 +127,11 @@ BoldItalicFont=texgyreheros-bolditalic.otf
 }
 \renewcommand{\bfseries}{\headingfont\color{maincolor}}
 \newcommand{\entry}[4]{%
- \parbox[t]{2cm}{\bodyfont #1}\parbox[t]{11.8cm}{%
+ \parbox[t]{2cm}{\bodyfont #1}\parbox[t]{12.8cm}{%
     \textbf{\bodyfont \hfill #2\\}%
     \hfill%
     {\footnotesize\bodyfont \addfontfeature{Color=workplace} #3}\\%
-   \bodyfont #4\vspace{\parsep}%
+   \bodyfont \vspace{1pt} #4%  \vspace{\parsep} (ili neki broj)<- to se moze dodati pre #4 ako cu da ubacim vertical space
   }\\}
 \pagenumbering{gobble}
+

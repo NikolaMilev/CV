@@ -133,5 +133,19 @@ BoldItalicFont=texgyreheros-bolditalic.otf
     {\footnotesize\bodyfont \addfontfeature{Color=workplace} #3}\\%
    \bodyfont \vspace{1pt} #4%  \vspace{\parsep} (ili neki broj)<- to se moze dodati pre #4 ako cu da ubacim vertical space
   }\\}
+  
+\setlength{\tabcolsep}{0pt}
+\newenvironment{aplist}{%
+  \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}ll}
+}{%
+  \end{tabular*}
+}
+
+\newcommand{\apentry}[2]{%
+ \parbox[t]{2cm}{\bodyfont #1}\parbox[t]{12.8cm}{%
+    \textbf{\bodyfont\color{black} #2\\}%
+  }\\}
+  
+% remove page numbers from the document
 \pagenumbering{gobble}
 

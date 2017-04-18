@@ -2,11 +2,25 @@
 \ProvidesClass{my_cv}[6/6/2013 custom CV class]
 \LoadClass{article}
 \RequirePackage{titlesec}
+\usepackage{xcolor}
+\usepackage{tabularx} 
+\usepackage[top=4.5cm, bottom=0cm, left=5cm, right=2cm]{geometry}
+% colours that I used in this CV
+\definecolor{maincolor}{RGB}{0,128,128}
+\definecolor{workplace}{HTML}{0395DE}
+\definecolor{sidesections}{HTML}{0395DE}
+\definecolor{maingray}{HTML}{B9B9B9}
+\definecolor{bodycolor}{RGB}{26,26,26}
 
 \RequirePackage[quiet]{fontspec}
 \RequirePackage[math-style=TeX]{unicode-math}
 \newfontfamily\bodyfont
-[BoldFont=texgyreheros-bold.otf,
+[Color=bodycolor,BoldFont=texgyreheros-bold.otf,
+ItalicFont=texgyreheros-italic.otf,
+BoldItalicFont=texgyreheros-bolditalic.otf]
+{texgyreheros-regular.otf}
+\newfontfamily\namefont
+[Color=white,BoldFont=texgyreheros-bold.otf,
 ItalicFont=texgyreheros-italic.otf,
 BoldItalicFont=texgyreheros-bolditalic.otf]
 {texgyreheros-regular.otf}
@@ -21,7 +35,6 @@ BoldItalicFont=texgyreheros-bolditalic.otf
 ]
 {texgyreheros-regular.otf}
 \setmathfont{texgyreheros-regular.otf}
-\usepackage{xcolor}
 \usepackage{xunicode}
 \usepackage{tikz}
 \usetikzlibrary{calc}
@@ -33,12 +46,9 @@ BoldItalicFont=texgyreheros-bolditalic.otf
 \usepackage{fontawesome}
 \usepackage{tgadventor}
 \usepackage{titlesec}
+\usepackage{multicol}
 
-% colours that I used in this CV
-\definecolor{maincolor}{RGB}{0,128,128}
-\definecolor{workplace}{HTML}{0395DE}
-\definecolor{sidesections}{HTML}{0395DE}
-\definecolor{maingray}{HTML}{B9B9B9}
+
 
 \titleformat{\section}         % Customise the \section command 
   {\headingfont\Large\scshape\raggedright\color{sidesections}} % Make the \section headers large (\Large),
@@ -46,7 +56,7 @@ BoldItalicFont=texgyreheros-bolditalic.otf
   {}{0em}                      % Can be used to give a prefix to all sections, like 'Section ...'
   {}                           % Can be used to insert code before the heading
 % \titlespacing*{<command>}{<left>}{<before-sep>}{<after-sep>}
-\titlespacing*{\section}{0pt}{2pt}{3pt}
+\titlespacing*{\section}{0pt}{1pt}{2pt}
   \titleformat{\subsection}
   {\large\scshape\raggedright}
   {}{0em}
@@ -68,7 +78,7 @@ BoldItalicFont=texgyreheros-bolditalic.otf
 	% the full name
 	\node(text) [anchor=south, xshift=1.5cm] (name) at (header) {%
       \fontsize{40pt}{62pt}\color{white}\selectfont%
-      {\bodyfont #1}{\headingfont #2}
+      {\namefont #1}{\headingfont #2}
     };
     % the rest of the information
     \node(text) [anchor=north] (contact) at (name.south) {%
@@ -82,7 +92,7 @@ BoldItalicFont=texgyreheros-bolditalic.otf
     
     % the picture
 	\node[xshift=2.5cm, yshift=-2.2cm] (mypic) at (header.west)
-    {\includegraphics[width=.33\textwidth]{nikola_cv_photo.png}};    
+    {\includegraphics[width=.28\textwidth]{nikola_cv_photo.png}};    
 	\end{tikzpicture}
 }
 
@@ -149,3 +159,8 @@ BoldItalicFont=texgyreheros-bolditalic.otf
 % remove page numbers from the document
 \pagenumbering{gobble}
 
+\newenvironment{absolutelynopagebreak}
+  {\par\nobreak\vfil\penalty0\vfilneg
+   \vtop\bgroup}
+  {\par\xdef\tpd{\the\prevdepth}\egroup
+   \prevdepth=\tpd}

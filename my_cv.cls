@@ -83,11 +83,11 @@ BoldItalicFont=texgyreheros-bolditalic.otf
     % the rest of the information
     \node(text) [anchor=north] (contact) at (name.south) {%
       \fontsize{10pt}{16pt}\color{white}\selectfont%
-      {\headingfont \faEnvelope~ #4 |~ \headingfont \phone~ #3 |~\headingfont \faGithub ~ #5 ~|~\headingfont \faLinkedinSquare ~ #6}
+      {\headingfont \faEnvelope~ #4 ~|~ \headingfont \phone~ #3 ~|~\headingfont ~\faGithub ~ #5 ~|~\headingfont ~\faLinkedinSquare ~ #6}
     };
     \node(text) [anchor=north] (addrbirth) at (contact.south) {%
       \fontsize{10pt}{16pt}\color{white}\selectfont%
-      {\faHome \headingfont #7 |~ \faBirthdayCake ~\headingfont #8}
+      {\faHome ~\headingfont #7 ~|~ \faBirthdayCake \headingfont ~ #8}
     };
     
     % the picture
@@ -108,7 +108,7 @@ BoldItalicFont=texgyreheros-bolditalic.otf
   }
   \begin{textblock}{3}(1, 6)
   \begin{flushleft}
-  \obeycr`
+  \obeycr
 }{%
   \restorecr
   \end{flushleft}
@@ -118,14 +118,12 @@ BoldItalicFont=texgyreheros-bolditalic.otf
 }
 % Command for printing skill progress bars; max level is 3; non-integers allowed
 \newcommand{\skills}[1]{%
-\tikzset{node distance = 0.2cm and 0.2cm}
-\begin{tikzpicture}[remember picture]
+\begin{tikzpicture}[remember picture, node distance=5cm]
 \foreach [count=\i] \x/\y in {#1}{
 				\fill[fill=maingray] (0,\i) rectangle (3,\i+0.2);
 				\fill[fill=maincolor](0,\i) rectangle (\y,\i+0.2);
 				\node [above right] at (0,\i+0.2) {\x};
-			}
-\end{tikzpicture}%
+			}\end{tikzpicture}%
 }
 
 % the entries for education/work

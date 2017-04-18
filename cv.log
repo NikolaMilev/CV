@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015/Debian) (preloaded format=xelatex 2017.1.4)  18 APR 2017 17:51
+This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015/Debian) (preloaded format=xelatex 2017.1.4)  18 APR 2017 20:23
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -990,7 +990,7 @@ Package: textpos 2014/01/03 1.7j, absolute positioning of text on the page
 \TPVertModule=\dimen275
 \TP@margin=\dimen276
 \TP@absmargin=\dimen277
-Grid set 16 x 16 = 38.39343pt x 49.68562pt
+Grid set 16 x 16 = 37.34424pt x 52.81541pt
 \TPboxrulesize=\dimen278
 \TP@ox=\dimen279
 \TP@oy=\dimen280
@@ -1031,16 +1031,16 @@ LaTeX Font Info:    ... okay on input line 2.
 *geometry* detected driver: xetex
 *geometry* verbose mode - [ preamble ] result:
 * driver: xetex
-* paper: <default>
+* paper: a4paper
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
 * modes: 
-* h-part:(L,W,R)=(142.26378pt, 415.12572pt, 56.9055pt)
-* v-part:(T,H,B)=(128.0374pt, 666.93259pt, 0.0pt)
-* \paperwidth=614.295pt
-* \paperheight=794.96999pt
-* \textwidth=415.12572pt
-* \textheight=666.93259pt
+* h-part:(L,W,R)=(142.26378pt, 398.3386pt, 56.9055pt)
+* v-part:(T,H,B)=(128.0374pt, 717.00945pt, 0.0pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=398.3386pt
+* \textheight=717.00945pt
 * \oddsidemargin=69.99379pt
 * \evensidemargin=69.99379pt
 * \topmargin=18.76741pt
@@ -1101,8 +1101,8 @@ Overfull \hbox (8.32813pt too wide) in paragraph at lines 29--29
  []
 
 
-Overfull \hbox (3.70667pt too wide) in paragraph at lines 31--31
-[]  []  
+Underfull \hbox (badness 10000) in paragraph at lines 33--35
+
  []
 
 (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/se-ascii-print.def
@@ -1110,66 +1110,76 @@ File: se-ascii-print.def 2011/12/02 v1.10 stringenc: Printable ASCII characters
 
 )
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 35.
+(Font)              <7> on input line 36.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 35.
+(Font)              <5> on input line 36.
 
-Overfull \hbox (5.97516pt too wide) in alignment at lines 35--51
+Overfull \hbox (22.76228pt too wide) in alignment at lines 36--52
 [] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 35--52
+Underfull \hbox (badness 10000) in paragraph at lines 36--53
 
  []
 
 
-Overfull \hbox (5.97516pt too wide) in alignment at lines 53--69
+Overfull \hbox (22.76228pt too wide) in alignment at lines 54--70
 [] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 53--70
+Underfull \hbox (badness 10000) in paragraph at lines 54--71
 
  []
 
 
-Overfull \hbox (5.97516pt too wide) in alignment at lines 73--76
+Overfull \hbox (22.76228pt too wide) in alignment at lines 74--77
 [] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 73--82
+Underfull \hbox (badness 10000) in paragraph at lines 74--83
 
  []
 
 
-Underfull \hbox (badness 1087) in paragraph at lines 90--90
+Underfull \hbox (badness 2735) in paragraph at lines 91--91
 []|[]\EU1/texgyreheros-bold.otf(0)/m/n/10 Minesweeper:[] \EU1/texgyreheros-regu
 lar.otf(0)/m/n/10 An implementation of the
+ []
+
+
+Overfull \hbox (27.88661pt too wide) in paragraph at lines 91--93
+[]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 91--93
+
  []
 
 [1
 
 ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 109.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 109.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 111.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 111.
  (./cv.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 109.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 109.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 111.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 111.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 109.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 111.
  ) 
 Here is how much of TeX's memory you used:
- 37254 strings out of 493638
- 690000 string characters out of 6146797
- 720193 words of memory out of 5000000
- 40217 multiletter control sequences out of 15000+600000
+ 37256 strings out of 493638
+ 690046 string characters out of 6146797
+ 720129 words of memory out of 5000000
+ 40219 multiletter control sequences out of 15000+600000
  4945 words of font info for 56 fonts, out of 8000000 for 9000
  1328 hyphenation exceptions out of 8191
- 73i,9n,70p,10404b,693s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 73i,9n,70p,10404b,681s stack positions out of 5000i,500n,10000p,200000b,80000s
 
 Output written on cv.pdf (1 page).

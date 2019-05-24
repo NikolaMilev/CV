@@ -15,26 +15,26 @@
 \RequirePackage[quiet]{fontspec}
 \RequirePackage[math-style=TeX]{unicode-math}
 \newfontfamily\bodyfont
-[Color=bodycolor,BoldFont=texgyreheros-bold.otf,
-ItalicFont=texgyreheros-italic.otf,
-BoldItalicFont=texgyreheros-bolditalic.otf]
-{texgyreheros-regular.otf}
+[Color=bodycolor,BoldFont=Roboto-Medium.ttf,
+ItalicFont=Roboto-Italic.ttf,
+BoldItalicFont=Roboto-MediumItalic.ttf]
+{Roboto-Regular.ttf}
 \newfontfamily\namefont
-[Color=white,BoldFont=texgyreheros-bold.otf,
-ItalicFont=texgyreheros-italic.otf,
-BoldItalicFont=texgyreheros-bolditalic.otf]
-{texgyreheros-regular.otf}
-\newfontfamily\thinfont[]{Lato-Hairline.ttf}
-\newfontfamily\headingfont[]{texgyreheros-bold.otf}
+[Color=white,BoldFont=Roboto-Medium.ttf,
+ItalicFont=Roboto-Italic.ttf,
+BoldItalicFont=Roboto-MediumItalic.ttf]
+{Roboto-Regular.ttf}
+\newfontfamily\thinfont[]{Roboto-Thin.ttf}
+\newfontfamily\headingfont[]{Roboto-Medium.ttf}
 \defaultfontfeatures{Mapping=tex-text}
 \setmainfont
 [Mapping=tex-text, Color=textcolor,
-BoldFont=texgyreheros-bold.otf,
-ItalicFont=texgyreheros-italic.otf,
-BoldItalicFont=texgyreheros-bolditalic.otf
+BoldFont=Roboto-Medium.ttf,
+ItalicFont=Roboto-Italic.ttf,
+BoldItalicFont=Roboto-MediumItalic.ttf
 ]
-{texgyreheros-regular.otf}
-\setmathfont{texgyreheros-regular.otf}
+{Roboto-Regular.ttf}
+\setmathfont{Roboto-Regular.ttf}
 \usepackage{xunicode}
 \usepackage{tikz}
 \usetikzlibrary{calc}
@@ -136,11 +136,14 @@ BoldItalicFont=texgyreheros-bolditalic.otf
 \renewcommand{\bfseries}{\headingfont\color{maincolor}}
 \newcommand{\entry}[4]{%
  \parbox[t]{2cm}{\bodyfont #1}\parbox[t]{12.8cm}{%
-    \textbf{\bodyfont \hfill #2\\}%
+    \textbf{\hfill {#2}\\}%
     \hfill%
     {\footnotesize\bodyfont \addfontfeature{Color=workplace} #3}\\%
-   \bodyfont \vspace{1pt} #4%  \vspace{\parsep} (ili neki broj)<- to se moze dodati pre #4 ako cu da ubacim vertical space
-  }\\}
+   \bodyfont \vspace{1pt}  #4
+   \vspace{8pt} 
+   %\noindent\hfil\rule{0.8\textwidth}{.4pt}\hfil
+   %  \vspace{\parsep} (ili neki broj)<- to se moze dodati pre #4 ako cu da ubacim vertical space
+  }\\ }
   
 \setlength{\tabcolsep}{0pt}
 \newenvironment{aplist}{%
